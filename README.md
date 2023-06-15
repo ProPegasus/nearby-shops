@@ -169,3 +169,9 @@ This file specifies the Python runtime version to be used.
 - If you encounter any issues during the deployment process, refer to railway.app's documentation or support resources for troubleshooting steps.
 
 - Make sure your GitHub repository is up to date with the latest changes before initiating the deployment to ensure the deployed application reflects the latest code.
+
+## What could have been implemented
+1. Having a logging mechanism to log info, warnings and errors
+2. Using environment variables provided by Railway.app to store django secret key
+3. A full-fledged SQL database instead of sqlite
+
