@@ -1,0 +1,1 @@
+web: gunicorn 'nearby_shops.wsgi'
