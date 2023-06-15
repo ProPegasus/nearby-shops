@@ -1,8 +1,8 @@
 # Django Nearby Shops Application
 
-This Django application provides functionality to manage and display a list of nearby shops. It includes the following URL patterns:
-
 [Click here to visit the deployment on railway.app](https://web-production-a819.up.railway.app/)
+
+This Django application provides functionality to manage and display a list of nearby shops. It includes the following URL patterns:
 
 ## Home
 
