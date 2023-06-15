@@ -126,6 +126,12 @@ The test runner will execute all the test cases and provide the test results in 
 ## Deploying Nearby Shops on Railway.app
 
 This guide provides step-by-step instructions on how to deploy the Nearby Shops application on railway.app. Railway.app is a platform that simplifies the deployment of web applications directly from a GitHub repository.
+Note: In your project settings.py file you will need to add the follwing lines of code after deploying to be able to prevent CSRF errors
+```
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.your-railway-app-domain',
+]
+```
 
 ### Prerequisites
 
