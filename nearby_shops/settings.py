@@ -120,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://web-production-a819.up.railway.app'
+    'https://*.web-production-a819.up.railway.app',
 ]
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
