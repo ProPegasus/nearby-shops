@@ -31,11 +31,6 @@ class CustomLoginView(auth_views.LoginView):
     This custom view allows for additional context variables to be passed to the login template,
     enabling dynamic customization of the page title.
 
-    Attributes:
-        template_name (str): The name of the template to be used for rendering the login page.
-        redirect_authenticated_user (bool): Whether to redirect authenticated users accessing the login page.
-    """
-
     def get_context_data(self, **kwargs):
         """
         Retrieves the context data to be passed to the login template.
