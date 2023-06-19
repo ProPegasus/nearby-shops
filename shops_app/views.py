@@ -30,6 +30,7 @@ class CustomLoginView(auth_views.LoginView):
 
     This custom view allows for additional context variables to be passed to the login template,
     enabling dynamic customization of the page title.
+    """
 
     def get_context_data(self, **kwargs):
         """
