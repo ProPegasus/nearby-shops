@@ -3,7 +3,17 @@ from math import radians, sin, cos, sqrt, atan2
 def calculate_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     """
     Calculate the distance between two points on the Earth's surface using the Haversine formula.
+
+    Args:
+        lat1 (float): Latitude of the first point in degrees.
+        lon1 (float): Longitude of the first point in degrees.
+        lat2 (float): Latitude of the second point in degrees.
+        lon2 (float): Longitude of the second point in degrees.
+
+    Returns:
+        float: The distance between the two points in kilometers, rounded to 2 decimal places.
     """
+    
     # Convert coordinates to radians
     lat1, lon1, lat2, lon2 = map(radians, [lat1, lon1, lat2, lon2])
 

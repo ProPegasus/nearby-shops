@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Shop(models.Model):
@@ -29,8 +30,14 @@ class Shop(models.Model):
     shop_name = models.CharField(max_length=32, help_text='Name of your shop (less than 32 characters)')
     category = models.CharField(choices=category_choices, max_length=32, help_text='Choose one of the following categories')
     city = models.CharField(choices=city_choices, max_length=128, help_text="Choose the location of your shop")
-    latitude = models.FloatField(help_text='Latitude in decimal degrees')
-    longitude = models.FloatField(help_text='Longitude in decimal degrees')
+    latitude = models.FloatField(help_text='Latitude in decimal degrees', validators=[
+            MaxValueValidator(90),
+            MinValueValidator(-90)
+        ])
+    longitude = models.FloatField(help_text='Longitude in decimal degrees', validators=[
+            MaxValueValidator(180),
+            MinValueValidator(-180)
+        ])
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True) 
     
